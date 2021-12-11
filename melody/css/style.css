@@ -1,18 +1,36 @@
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../fonts/BebasNeue/BebasNeueRegular.eot');
+	src: local('Bebas Neue Regular Regular'), local('BebasNeueRegular'),
+		url('../fonts/BebasNeue/BebasNeueRegular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BebasNeue/BebasNeueRegular.woff2') format('woff2'),
+		url('../fonts/BebasNeue/BebasNeueRegular.woff') format('woff'),
+		url('../fonts/BebasNeue/BebasNeueRegular.ttf') format('truetype'),
+		url('../fonts/BebasNeue/BebasNeueRegular.svg#BebasNeueRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+img {
+	vertical-align: top;
 }
 body {
 	font-family: 'Roboto', sans-serif;
+	line-height: 1;
 }
 .header {
 	background-color: #635854;
-	padding-top: 12px;
-	padding-bottom: 12px;
 	border-bottom: 4px solid #3596f5;
 }
 .navbar {
 	max-width: 1280px;
-	margin: auto;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -31,6 +49,13 @@ body {
 .navbar-item {
 	margin-left: 40px;
 	margin-right: 40px;
+	padding: 9px 16px;
+}
+.navbar-item:hover {
+	background: #3596F5;
+}
+.navbar-item:active {
+	background: #3596F5;
 }
 .navbar-link {
 	color: #fff;
@@ -52,4 +77,76 @@ body {
 	font-size: 17px;
 	font-weight: 700;
 	line-height: 20px;
+}
+/* main */
+.main {
+	max-width: 1280px;
+	margin: 0 auto;
+	display: flex;
+	padding-top: 54px;
+}
+.main-image {
+}
+.home-image path {
+	opacity: 0;
+	cursor: pointer;
+}
+.home-image path:hover {
+	opacity: 1;
+}
+.home-image {
+	vertical-align: top;
+}
+.main-info {
+	flex-grow: 1;/* увеличит блок с info на все свободное пр-во */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 68px 0px;
+}
+.main-title {
+	font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	font-size: 37px;
+	font-weight: normal;
+	color: #635854;
+	line-height: 44px;
+	margin: 0;
+}
+.counter-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.counter {
+	font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+	color: #635854;
+	font-size: 124px;
+	margin: 35px 0px;
+}
+.counter-btn {
+	border: 0;
+	background-color: #fff;
+	cursor: pointer;
+}
+.counter-up {
+}
+.counter-arrow {
+}
+.counter-arrow-up {
+}
+.counter-arrow-down {
+	transform: rotateX(180deg);
+}
+.btn {
+}
+.btn-primary {
+	background: #3596F5;
+	border-radius: 6px;
+	border: 0;
+	color: #fff;
+	line-height: 19px;
+	padding: 16px 36px;
+	cursor: pointer;
 }
